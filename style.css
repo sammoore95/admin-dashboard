@@ -37,17 +37,43 @@ html, body {
     flex-direction: row;
     align-items: center;
     padding: 5px;
-    border: 1px solid black;
 }
 
 .left-pane-header  h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-left: 10px;
     color: white;
 }
 
 .dashboard-icon {
     fill: white;
-    width: 20%;
+    width: 3rem;
+    height: 3rem;
 }
+
+.left-pane-menu {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    border: solid 1px black;
+}
+
+.left-pane-menu > div > .menu-icon,h3 {
+    display: grid;
+    fill: white;
+    color: white;
+}
+
+.menu-icon {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 2rem;
+    height: 2rem;
+}
+
+.left-pane-menu > div > h3 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+
 
