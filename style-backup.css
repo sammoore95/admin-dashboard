@@ -1,0 +1,78 @@
+html {
+    box-sizing: border-box;
+}
+
+*, 
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100vh;
+    margin: 0;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+#left-pane {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #3498db;
+}
+
+.left-pane-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+}
+
+.left-pane-header  h2 {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    color: white;
+}
+
+.dashboard-icon {
+    fill: white;
+    width: 3rem;
+    height: 3rem;
+}
+
+.left-pane-menu,
+.left-pane-settings {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-pane-menu {
+    flex-grow: 1;
+}
+
+.left-pane-menu > div > .menu-icon,h3,
+.left-pane-settings > div > .menu-icon,h3 {
+    fill: white;
+    color: white;
+    padding-left: 10px;
+}
+
+.left-pane-menu > div,
+.left-pane-settings > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu-icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+
+
+
