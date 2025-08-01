@@ -6,7 +6,7 @@ html {
 *::before,
 *::after {
     box-sizing: inherit;
-    /*outline: 1px solid black; /*Used for layout and design phase, remove when finished*/
+    outline: 1px solid black; /*Used for layout and design phase, remove when finished*/
 }
 
 html, 
@@ -39,31 +39,111 @@ body {
 
 #side-bar{
     background-color: cornflowerblue;
+    display: grid;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 6;
-}
-
-#side-bar-header {
-    display: grid;
     grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(12, minmax(0, 1fr)) 8fr;
     align-items: center;
-    padding-left: 10px;
+    justify-content: center;
+    padding-top: .5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    gap: 1rem;
 }
 
-#side-bar-header > h2 {
+#side-bar > p {
     color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
-#side-bar > div {
-    display: grid;
-}
-
-.side-bar-icon {
+#side-bar > svg {
     fill: white;
     height: 2rem;
-    width: 2rem
+    width: 2rem;
+}
+#icon-dashboard {
+    fill: white;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#text-dashboard {
+    grid-area: 1 / 2 / 2/ 3;
+}
+
+#icon-home {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+#text-home {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+#icon-profile {
+    grid-area: 4 / 1 / 5/ 2;
+}
+
+#text-profile{
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+#icon-messages{
+    grid-area: 5 / 1 / 6 / 2;
+}
+
+#text-messages {
+    grid-area: 5 / 2 / 6 / 3;
+}
+
+#icon-history {
+    grid-area: 6 / 1 / 7 / 2;
+}
+
+#text-history {
+    grid-area: 6 / 2 / 7 / 3;
+}
+
+#icon-tasks {
+    grid-area: 7 / 1 / 8 / 2;
+}
+
+#text-tasks {
+    grid-area: 7 / 2 / 8 / 3;
+}
+
+#icon-communities {
+    grid-area: 8 / 1 / 9 / 2;
+}
+
+#text-communities {
+    grid-area: 8 / 2 / 9 / 3;
+}
+
+#icon-settings {
+    grid-area: 10 / 1 / 11/ 2;
+}
+
+#text-settings {
+    grid-area: 10 / 2 / 11 / 3;
+}
+
+#icon-support {
+    grid-area: 11 / 1 / 12 / 2;
+}
+
+#text-support {
+    grid-area: 11 / 2 / 12 / 3;
+}
+
+#icon-privacy {
+    grid-area: 12 / 1 / 13 / 2;
+}
+
+#text-privacy {
+    grid-area: 12 / 2 / 13 / 3;
 }
 
 #content-body {
