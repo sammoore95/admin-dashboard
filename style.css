@@ -6,6 +6,7 @@ html {
 *::before,
 *::after {
     box-sizing: inherit;
+    /*outline: 1px solid black; /*Used for layout and design phase, remove when finished*/
 }
 
 html, 
@@ -23,7 +24,6 @@ body {
 }
 
 #header {
-    border: 1px solid black;
     display: grid;
     grid-column-start: 2;
     grid-column-end: 6;
@@ -34,10 +34,10 @@ body {
     height: 20vh; /* ~1/6th of the viewport height */
     max-height: 20vh;
     overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
 }
 
 #side-bar{
-    border: 1px solid black;
     background-color: cornflowerblue;
     grid-column-start: 1;
     grid-column-end: 2;
@@ -46,7 +46,6 @@ body {
 }
 
 #side-bar-header {
-    border: 1px solid black;
     display: grid;
     grid-template-columns: 1fr 4fr;
     align-items: center;
@@ -68,7 +67,6 @@ body {
 }
 
 #content-body {
-    border: 1px solid black;
     background-color: lightblue;
     grid-column-start: 2;
     grid-column-end: 6;
@@ -77,11 +75,10 @@ body {
 }
 
 #search-bar {
-    border: 1px solid black;
     display: grid;
     grid-template-columns: auto 1fr; 
     align-items: center;              
-    gap: 0.5rem;  
+    gap: rem;  
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -102,7 +99,6 @@ body {
 }
 
 #profile-header {
-    border: 1px solid black;
     display: grid;
     grid-template-columns: auto 1fr; 
     align-items: center;  
@@ -111,9 +107,58 @@ body {
     grid-row-start: 2;
     grid-row-end: 3;
     min-height: 0;
-    gap: 0.5rem;  
+    gap: .5rem;  
+    padding-left: .5rem;
     overflow: hidden;
+}
 
+#profile-notifications {
+    display: flex;
+    flex: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-right: 2rem;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#profile-notification-user {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+#notification-icon {
+    height: 2rem;
+}
+
+#my-avatar-notifications {
+    height: 2rem;
+}
+
+#profile-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 2rem;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.profile-action-button {
+    width: 30%;
+    min-width: 70px;
+    height: 50%;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 #profile-header div {
