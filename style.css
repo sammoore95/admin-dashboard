@@ -6,13 +6,17 @@ html {
 *::before,
 *::after {
     box-sizing: inherit;
-    outline: 1px solid black; /*Used for layout and design phase, remove when finished*/
+    /*outline: 1px solid black; /*Used for layout and design phase, remove when finished*/
 }
 
 html, 
 body {
     height: 100vh;
     margin: 0;
+}
+
+body {
+    overflow-y: auto;
 }
 
 #container {
@@ -157,6 +161,9 @@ body {
     height: 100%;
     overflow: hidden;
 }
+#content-area {
+    overflow-y: auto;
+}
 
 #search-bar {
     display: grid;
@@ -281,9 +288,8 @@ body {
 
 #projects-area {
     display: grid;
-    border: 1px solid black;
     grid-area: 1 / 1 / 2 / 2;
-    grid-auto-rows: minmax(0, 1fr);    
+    grid-auto-rows: repeat(3, 1fr);    
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     padding: 1rem;
@@ -298,6 +304,8 @@ body {
     justify-content: space-between;
     background-color: white;
     border-radius: 4px;
+    padding: 10px;
+    height: 100%;          /* Key: take full height of the grid cell */
 }
 
 .card-icon-section {
@@ -315,7 +323,31 @@ body {
 }
 
 #content-side-bar {
-    border: 1px solid black;
+    display: grid;
+    padding: 1rem;
     grid-area: 1 / 2 / 1 / 3;
+    grid-template-rows: 1fr 1fr;
 }
+
+#side-bar-announcements {
+    border-radius: 4px;
+    background-color: white;
+}
+
+.side-bar-announcement-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0rem; /* Tiny spacing between header and paragraph */
+    padding: 0.5rem; /* Spacing around the whole announcement */
+}
+
+.side-bar-announcement-section h3,
+.side-bar-announcement-section p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.1; /* reduce line height to pull them tighter */
+}
+
+
 
